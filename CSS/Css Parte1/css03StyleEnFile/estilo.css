@@ -1,0 +1,21 @@
+body{
+    font-size: 32px;
+}
+
+h1 {
+  color:darkblue;
+  font-size: 1em;
+  text-align: center;
+  background-color: darkturquoise ;
+  display: block;
+}
+
+p {
+  text-align: left;
+  font-style: italic;
+  font-size: 1em;
+  color: darkblue;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: thin;
+}

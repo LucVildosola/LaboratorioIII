@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+}
+.navFooter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: grey;
+  justify-content: center;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: lightgray;
+  height: 80vh;
+}
+.input {
+  width: 70%;
+}
+.columna1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 2rem;
+}
+.columna2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contenedorInput {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  font-size: 2rem;
+}
+.contenedorInput input {
+  height: 50%;
+}
+
+#botonEnviar {
+  width: 70%;
+  height: 15%;
+  margin-top: 2rem;
+}

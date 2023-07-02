@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.contenedorGeneral {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  min-height: 95vh;
+  background-color: lightsalmon;
+  align-items:center;
+  justify-content: space-evenly;
+}
+
+.img {
+  width: 250px;
+  height: 200px;
+  margin: 60px;
+}
+
+.contenedorDeImagen {
+  display: flex;
+}
+.contenedor {
+  display: flex;
+  flex-direction: row;
+}

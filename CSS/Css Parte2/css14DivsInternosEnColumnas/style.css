@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.contenedorGeneral {
+  width: 90%;
+  height: auto;
+  background-color: lightgreen;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: auto;
+}
+
+.ContenedorCajas {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.caja {
+  width: 12em;
+  height: auto;
+  background-color: #87cefa;
+  margin: 10px;
+  float: left;
+  clear: none;
+  padding: 10px;
+}
+
+.cajaDeCajas {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .caja {
+    background-color: yellow;
+    margin-bottom: 10px;
+  }
+}

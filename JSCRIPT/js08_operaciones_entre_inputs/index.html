@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio Luciano Vildosola</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2> Introducir un valor en los cuadros de texto y luego pulsar el boton para ejecutar la funcion correspondiente</h2>
+
+    <div class="contenedorGeneral">
+      <div class="contImput">
+        <label for="Entrada1">Entrada 1:</label>
+        <input type="number" id="input1" />
+      </div>
+      <div class="contImput">
+        <label for="Entrada2">Entrada 2:</label>
+        <input type="number" id="input2" />
+      </div>
+      <div class="contImput">
+        <label for="Entrada3">Entrada 3:</label>
+        <input type="number" id="input3" />
+      </div>
+      <div class="contImput">
+        <label for="Entrada4">Resultado:</label>
+        <input type="number" id="resultado" />
+      </div>
+    </div>
+    <div class="botones">
+      <button class="boton" id="suma">Suma</button>
+      <button class="boton" id="promedia">Promedia</button>
+      <button class="boton" id="mayor">Mayor</button>
+    </div>
+    <script>
+
+        const entrada1 = document.getElementById("input1");
+        const entrada2 = document.getElementById("input2");
+        const entrada3 = document.getElementById("input3");
+        const resultado = document.getElementById("resultado");
+        const suma = document.getElementById("suma");
+        const promedia = document.getElementById("promedia");
+        const mayor = document.getElementById("mayor");
+        let acumulador = 0;
+
+        suma.addEventListener("click", () => {
+        const numero1 = Number(entrada1.value);
+        const numero2 = Number(entrada2.value);
+        const numero3 = Number(entrada3.value);
+        const resultadoSuma = numero1 + numero2 + numero3;
+        resultado.value = resultadoSuma;
+        acumulador = resultadoSuma;
+        });
+        promedia.addEventListener("click", () => {
+        const promedio = acumulador / 3;
+        resultado.value = promedio;
+        });
+        mayor.addEventListener("click", () => {
+        const numero1 = Number(entrada1.value);
+        const numero2 = Number(entrada2.value);
+        const numero3 = Number(entrada3.value);
+
+          if (numero1 > numero2 ){
+            if (numero1 > numero3){
+              resultado.value = numero1;
+            }
+            else{
+                  resultado.value = numero3;
+            }
+          }
+          else{
+            if (numero2 > numero3){
+              resultado.value = numero2;
+            }
+            else{
+              resultado.value = numero3;
+            }
+          }
+        });
+
+
+    </script>
+  </body>
+</html>

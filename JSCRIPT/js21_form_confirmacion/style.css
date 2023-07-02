@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedorForm {
+    width: 70vw;
+    height: 50vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+  }
+  .botones {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5rem;
+    justify-content: center;
+  }
+  .labels {
+    display: flex;
+    max-width: 25vw;
+    flex-direction: column;
+  }

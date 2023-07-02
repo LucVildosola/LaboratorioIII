@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio Luciano Vildosola</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contenedorGeneral">
+      <div class="contenedorCalculadora">
+        <input type="number" id="input" />
+        <div class="numeros">
+          <button class="boton" id="boton1">1</button>
+          <button class="boton" id="boton2">2</button>
+          <button class="boton" id="boton3">3</button>
+          <button class="boton" id="boton4">4</button>
+          <button class="boton" id="boton5">5</button>
+          <button class="boton" id="boton6">6</button>
+          <button class="boton" id="boton7">7</button>
+          <button class="boton" id="boton8">8</button>
+          <button class="boton" id="boton9">9</button>
+        </div>
+        <div class="operadores">
+          <div class="contenedor-linea">
+            <button class="operador" id="operador1">+</button>
+            <button class="operador" id="operador2">Muestra Acumulador</button>
+          </div>
+          <div class="contenedor-linea">
+            <button class="operador" id="operador3">Borra Acumulador</button>
+            <button class="operador" id="operador4">Borra Display</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script >
+
+let input = document.getElementById("input");
+const boton1 = document.getElementById("boton1");
+const boton2 = document.getElementById("boton2");
+const boton3 = document.getElementById("boton3");
+const boton4 = document.getElementById("boton4");
+const boton5 = document.getElementById("boton5");
+const boton6 = document.getElementById("boton6");
+const boton7 = document.getElementById("boton7");
+const boton8 = document.getElementById("boton8");
+const boton9 = document.getElementById("boton9");
+const suma = document.getElementById("operador1");
+const muestra = document.getElementById("operador2");
+const borraAcumulador = document.getElementById("operador3");
+const borraDisplay = document.getElementById("operador4");
+let acumulador = 0;
+const concat = (num) => {
+  if (input.value) {
+    let valorInput = input.value;
+    valorInput = valorInput + num;
+    input.value = valorInput;
+  } else {
+    input.value = num;
+  }
+};
+boton1.addEventListener("click", () => {
+  concat(1);
+});
+boton2.addEventListener("click", () => {
+  concat(2);
+});
+boton3.addEventListener("click", () => {
+  concat(3);
+});
+boton4.addEventListener("click", () => {
+  concat(4);
+});
+boton5.addEventListener("click", () => {
+  concat(5);
+});
+boton6.addEventListener("click", () => {
+  concat(6);
+});
+boton7.addEventListener("click", () => {
+  concat(7);
+});
+boton8.addEventListener("click", () => {
+  concat(8);
+});
+boton9.addEventListener("click", () => {
+  concat(9);
+});
+borraDisplay.addEventListener("click", () => {
+  if (input.value) {
+    input.value = "";
+  }
+});
+suma.addEventListener("click", () => {
+  if (input.value) {
+    acumulador = acumulador + Number(input.value);
+    input.value = "";
+  }
+});
+muestra.addEventListener("click", () => {
+  alert(acumulador);
+});
+borraAcumulador.addEventListener("click", () => {
+  acumulador = 0;
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <button type="click" title="Youtube" id="youtube">Youtube</button>
+    <button type="click" title="Source Force" id="source">Source Force</button>
+    <button type="click" title="Gmail" id="gmail">Gmail</button>
+    <script>
+
+      const youtubeButton = document.getElementById("youtube");
+      const sourceForceButton = document.getElementById("source");
+      const gmailButton = document.getElementById("gmail");
+
+      youtubeButton.addEventListener("click", redirectToYoutube);
+      sourceForceButton.addEventListener("click", redirectToSourceForce);
+      gmailButton.addEventListener("click", redirectToGmail);
+
+      function redirectToYoutube() {
+        window.location.href = "https://www.youtube.com";
+      }
+
+      function redirectToSourceForce() {
+        window.location.href = "https://sourceforge.net/";
+      }
+
+      function redirectToGmail() {
+        window.location.href = "https://mail.google.com";
+      }
+
+
+    </script>
+  </body>
+</html>

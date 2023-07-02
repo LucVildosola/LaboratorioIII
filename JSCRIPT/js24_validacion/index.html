@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <h2>Ejer validación de un INPUT</h2>
+    <div class="contenedorGeneral">
+      <form class="contenedorForm" id="form">
+        <div class="inputs">
+          <label for="dia">Ingrese el día del mes</label>
+          <input type="text" id="dia" name="dia" />
+          <label for="mes">Ingrese el mes</label>
+          <input type="text" id="mes" name="mes" />
+        </div>
+        <div class="botones">
+          <button class="boton" type="submit" id="boton">Enviar</button>
+          <button type="reset" class="boton" id="lista">reset</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      const diaInput = document.getElementById("dia");
+      const mesInput = document.getElementById("mes");
+
+      diaInput.addEventListener("blur", () => {
+        const diaValue = parseInt(diaInput.value);
+
+        if (isNaN(diaValue) || diaValue < 1 || diaValue > 31) {
+          alert("Debe ingresar un dato válido para el día del mes.");
+        }
+      });
+
+      mesInput.addEventListener("blur", () => {
+        const mesValue = parseInt(mesInput.value);
+
+        if (isNaN(mesValue) || mesValue < 1 || mesValue > 12) {
+          alert("Debe ingresar un dato válido para el mes.");
+        }
+      });
+
+    </script>
+  </body>
+</html>

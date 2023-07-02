@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario ejer03Formularios</title>
+</head>
+<main>
+    <section>
+        <h1>Formularios para entradas sin validación</h1>
+        <form action="respuestaFormulario.html" target="_blank" method="get">
+            <ul>
+                <li style="margin-top: 10px;">
+                    <label for="apellido"><strong>Apellido: </strong></label></br>
+                    <input type="text" name="apellido" id="apellido"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="password"><strong>Contraseña: </strong></label></br>
+                    <input type="password" name="password" id="password"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="oculto"><strong>Oculto: </strong></label></br>
+                    <input type="hidden" name="oculto" id="oculto" value="valor oculto"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="disabled"><strong>Campo deshabilitado: </strong></label></br>
+                    <input type="text" disabled value="valor deshabilitado" name="disabled" id="disabled"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="readonly"><strong>Campo de solo lectura: </strong></label></br>
+                    <input type="text" readonly value="valorSoloLectura" name="readonly" id="readonly"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="deportes"><strong>Practica deportes</strong></label></br>
+                    <input type="checkbox" value="si" name="deportes" id="deportes"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="musica"><strong>Practica música</strong></label></br>
+                    <input type="checkbox" value="si" name="musica" id="musica"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="pintura"><strong>Practica pintura artística</strong></label></br>
+                    <input type="checkbox" value="si" name="pintura" id="pintura"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="sexo"><strong>Sexo</strong></label></br>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" value="m" name="sexo" id="masculino"/>
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" value="f" name="sexo" id="femenino"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="estudios">Estudios cursados: </label></br>
+                    <select name="estudios" id="estudios">
+                        <option value="pri" selected="selected">Primarios</option>
+                        <option value="sec">Secundarios</option>
+                        <option value="ter">Terciarios</option>
+                        <option value="uni">Universitarios</option>
+                        <option value="pos">Postgrado</option>
+                    </select>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="fecha"><strong>Fecha y Hora</strong></label></br>
+                    <input type="date" name="fecha" />
+                    <input type="time" name="hora" />
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="color"><strong>Color</strong></label></br>
+                    <input type="color" name="color" id="color"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <input type="submit" value="Enviar Formulario sin validación">
+                </li>
+                <li style="margin-top: 10px;">
+                    <input type="reset" value="Reset a valores predeterminados">
+                </li>
+            </ul>
+        </form>
+        <h1>Formularios para entradas con validación</h1>
+        <form action="respuestaFormulario.html" target="_blank" method="get">
+            <ul>
+                <li style="margin-top: 10px;">
+                    <label for="comentario"><strong>Comentario (validación por requerido): </strong></label></br>
+                    <input type="text" required name="comentario" id="comentario"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="email"><strong>Email con doble validación (x@x y required):</strong></label></br>
+                    <input type="email" name="email" id="email" required placeholder="texto@texto"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="number"><strong>Número entero limitado (validación por tipo numérico y cotas 0 al 9):</strong></label></br>
+                    <input type="number" min="0" max="9" name="number" id="number"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="decimal"><strong>Número decimal:</strong></label></br>
+                    <input type="number" step="0.5" name="decimal" id="decimal"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="url"><strong>URL (validación por requerido, escribir http://):</strong></label></br>
+                    <input type="url" placeholder="http://xxx" name="url" id="url" required/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="pattern"><strong>Pattern de validacion</strong></label></br>
+                    <input type="text" name="pattern" id="pattern" pattern="[a-z]{2}[1-2]{2}" title="3 letras y dos numeros que sean 1 o 2 solamente"/>
+                </li>
+                <li style="margin-top: 10px;">
+                    <label for="cellphone"><strong>Pattern de validacion</strong></label></br>
+                    <input type="text" name="cellphone" id="cellphone" pattern="\+54 11 [0-9]{8}" title="+54 11 xxxxxxxx" placeholder="+54 11 44445555"/>
+                </li>
+                
+                <li style="margin-top: 10px;">
+                    <input type="submit" value="Enviar Formulario sin validación">
+                </li>
+                <li style="margin-top: 10px;">
+                    <input type="reset" value="Reset valores predeterminados">
+                </li>
+            </ul>
+        </form>
+    </section>
+</main>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <nav class="navFooter">
+      <h2 class="textNavFooter">Artículos</h2>
+      <div class="botones">
+        <button type="button" id="cargar">Cargar Datos</button>
+        <button type="button" id="vaciar">Vaciar datos</button>
+      </div>
+    </nav>
+    <table>
+      <tr class="titulosTabla">
+        <td>CODART</td>
+        <td>FAMILIA</td>
+        <td>UM</td>
+        <td>DESCRIPCIÓN</td>
+        <td>FECHA ALTA</td>
+        <td>SALDO STOCK</td>
+      </tr>
+      <tbody class="tBody" id="tBody"></tbody>
+      <tr class="titulosTabla">
+        <td>s codArt</td>
+        <td>s familia</td>
+        <td>s um</td>
+        <td>s descripción</td>
+        <td>s fecha alta</td>
+        <td>s saldo stock</td>
+      </tr>
+    </table>
+    <footer class="navFooter">
+      <h2 class="textNavFooter">fin</h2>
+    </footer>
+
+    <script src="/ESPECIALES/jquery-3.7.0.min.js"></script>
+    <script>
+    const botonCargar = document.getElementById("cargar");
+    const botonVaciar = document.getElementById("vaciar");
+    const tBody = document.getElementById("tBody");
+    botonCargar.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Eliminar contenido existente dentro del <tbody>
+      tBody.innerHTML = "";
+      // Obtener los datos del archivo articulos.json
+      $.getJSON("../articulos.json", function (data) {
+        // Variable para rastrear el índice de la fila actual
+        let filaIndex = 0;
+        // Recorrer los artículos y crear filas para cada uno
+        data.articulos.forEach((articulo) => {
+        // Crear una nueva fila (<tr>)
+          const fila = document.createElement("tr");
+          // Aplicar la clase de color de fondo según el índice de fila
+          fila.className = filaIndex % 2 === 0 ? "filaPar" : "filaImpar";
+          // Incrementar el índice de la fila
+          filaIndex++;
+          // Crear celdas (<td>) y asignar los valores correspondientes
+          const codArt = document.createElement("td");
+          codArt.textContent = articulo.codArt;
+          fila.appendChild(codArt);
+          const familia = document.createElement("td");
+          familia.textContent = articulo.familia;
+          fila.appendChild(familia);
+          const um = document.createElement("td");
+          um.textContent = articulo.um;
+          fila.appendChild(um);
+          const descripcion = document.createElement("td");
+          descripcion.textContent = articulo.descripcion;
+          fila.appendChild(descripcion);
+          const fechaAlta = document.createElement("td");
+          fechaAlta.textContent = articulo.FechaAlta;
+          fila.appendChild(fechaAlta);
+          const saldoStock = document.createElement("td");
+          saldoStock.textContent = articulo.saldoStock;
+          fila.appendChild(saldoStock);
+          // Agregar la fila al <tbody>
+          tBody.appendChild(fila);
+        });
+      });
+    });
+      botonVaciar.addEventListener("click", (e) => {
+        e.preventDefault();
+        tBody.innerHTML = "";
+      });
+      </script>
+  </body>
+</html>

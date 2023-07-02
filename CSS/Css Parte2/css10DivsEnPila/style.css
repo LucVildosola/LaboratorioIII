@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.contenedorGeneral {
+  width: 80%;
+  min-height: 70vh;
+  background-color: #87cefa;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.ContenedorCajas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.img {
+  width: 100px;
+  height: 80px;
+}
+
+.caja {
+  border-radius: 15px;
+  width: 40%;
+  height: 20vh;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  clear: both;
+}
+
+.cajaDeCajas {
+  display: flex;
+  justify-content: center;
+}
+
+#caja1 {
+  background-color: grey;
+  box-shadow: 10px 10px 10px -10px, 10px 0px 10px -10px;
+}
+#caja2 {
+  background: radial-gradient(circle, #ff0000, #0000ff);
+}
+#caja3 {
+  background: linear-gradient(#3a2a34, #08a122);
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 50%;
+}
+#caja4 {
+  background: linear-gradient(45deg, #c0df12, #b8136d);
+  text-align: left;
+  padding: 10px;
+  box-shadow: 10px 10px 10px -10px, 10px 0px 10px -10px;
+}
+#caja5 {
+  background: linear-gradient(45deg, #b8136d, #c0df12);
+  text-align: left;
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  #caja1 {
+    background-color: rgb(184, 184, 19);
+  }
+}
+@media (max-width: 600px) {
+  #caja1 {
+    background-color: lightblue;
+  }
+}

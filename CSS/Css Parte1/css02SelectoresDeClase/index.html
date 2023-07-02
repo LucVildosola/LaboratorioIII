@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  text-align: left;
+  margin-bottom: auto;
+  display: block;
+
+}
+
+div.claseAcotacion{
+text-align:center ;
+color:darkblue;
+font-style : italic;
+border-style:solid;
+border-color:darkblue;
+border-width: thin;
+
+}
+
+p.marginAcotacion{
+
+font-size: 12px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+p{
+
+    font-size: 22px;
+    border-bottom: thin;
+}
+
+span.claseResaltado{
+    background-color: #FFFF00;
+    font-weight: bold;
+}
+
+p.claseResaltado{
+
+    background-color: #FFFF00;
+    font-weight: bold;
+}
+
+
+span.claseAyuda{
+font-size: 18px;
+color: orange;
+font-style : italic;
+border-style:solid;
+border-color: yellow;
+margin-bottom: auto;
+border-width: thin;
+}
+
+p.claseContenidoComun{
+
+    font-size: 1em;
+
+}
+
+span#id1{
+
+font-size: 18px;
+color: red;
+font-style : italic;
+border-style:solid;
+border-color: red;
+margin-bottom: auto;
+border-width: thin;
+font-weight: bold;
+}
+
+img.imagenAl50{
+width: 50%;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>A partir de esta página no usaremos más el atributo style en ninguna etiqueta.</h1>
+<h1>Todo el estilo será definido dentro de una etiqueta style como "clase", anidada en la etiqueta head del documento.</h1>
+<h1>Todos los parrafos tienen un default como estilo que incluyen un margin-bottom para separarlos mas entre ellos.</h1>
+
+<p>Este parrafo contiene un grupo de palabras delimitado por una etiqueta "span". El comienzo es aqui: <span class="claseResaltado"> grupo de palabras destacadas con el estilo claseResaltado </span> blablabla blablabla blablabla</p>
+<div class= "claseAcotacion">
+
+    <p class= "marginAcotacion"> Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class= "claseAcotacion" fdkjfdkjfdk dsadas fdfdfd fdfdfde fdfdf  kdskjk dksjkds kfjskdksj kdsjkjds dsadsada dsd asd asd adasd asdsad asd asd sad asd as da dsadsad sd sad sad sadsa ds  </p>
+
+</div>
+
+<p class= "claseResaltado"> Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class= "claseResaltado"</p>
+
+<span class= "claseAyuda"> Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class= "claseAyuda"</span>
+
+<p>Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class= "claseContenidoComun"</p>
+
+
+<span id="id1">Parrafo formateado por un estilo particular definido en el style del documento para un parrafo especifico id= "idUnico". No se trata de un selector de clase sino de un selector de elemento "#"</span>
+
+<h1>Todas las imagenes con class = "imagenAl50" en esta pagina se encuentran limitadas al 50% del ancho del contenedor mas alla de su tamaño real en pixeles:</h1>
+
+<img src="imgjpg.gif" class="imagenAl50">
+
+
+</body>
+</html>

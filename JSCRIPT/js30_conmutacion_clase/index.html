@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <h1>Ejemplo de cambio de estilos dinamicamente</h1>
+    <div class="contenedorPrincipal">
+      <ul>
+        <h2>Lista con estilo</h2>
+        <li>Texto 1</li>
+        <li>Texto 2</li>
+        <li>Texto 3</li>
+      </ul>
+    </div>
+    <button type="click" id="estilo1">Estilo 1</button>
+    <button type="click" id="estilo2">Estilo 2</button>
+    <button type="click" id="estilo3">Estilo 3</button>
+    <button type="click" id="estilo4">Estilo 4</button>
+    <script>
+      const contenedorPrincipal = document.querySelector(".contenedorPrincipal");
+      const estilo1Button = document.getElementById("estilo1");
+      const estilo2Button = document.getElementById("estilo2");
+      const estilo3Button = document.getElementById("estilo3");
+      const estilo4Button = document.getElementById("estilo4");
+
+      estilo1Button.addEventListener("click", () => {
+        contenedorPrincipal.style.backgroundColor = "red";
+        contenedorPrincipal.style.border = "4px solid black";
+      });
+
+      estilo2Button.addEventListener("click", () => {
+        contenedorPrincipal.style.backgroundColor = "blue";
+        contenedorPrincipal.style.border = "4px solid black";
+      });
+
+      estilo3Button.addEventListener("click", () => {
+        contenedorPrincipal.style.backgroundColor = "green";
+        contenedorPrincipal.style.border = "4px solid black";
+      });
+
+      estilo4Button.addEventListener("click", () => {
+        contenedorPrincipal.style.backgroundColor = "yellow";
+        contenedorPrincipal.style.border = "4px solid black";
+      });
+
+    </script>
+  </body>
+</html>

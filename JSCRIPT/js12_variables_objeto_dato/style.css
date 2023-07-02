@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedorPrincipal {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .contenedorInputs {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    margin-bottom: 1rem;
+  }
+  .contenedorInputs input {
+    width: 35vw;
+  }
+  #boton {
+    width: 35vw;
+  }
+  .contenedorControl {
+    background-color: salmon;
+    display: flex;
+    flex-direction: column;
+  }
+  .botones {
+    display: flex;
+    flex-direction: row;
+  }

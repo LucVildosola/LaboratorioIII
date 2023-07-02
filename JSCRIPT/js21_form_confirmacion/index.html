@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <form class="contenedorForm" id="form">
+      <h3>Confirmación de envío y de reset</h3>
+      <div class="labels">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" />
+      </div>
+      <div class="botones">
+        <button type="submit" id="boton">Enviar</button>
+        <button type="reset" id="lista">Blanquear</button>
+      </div>
+    </form>
+    <script>
+
+      const form = document.getElementById("form");
+      const nombre = document.getElementById("nombre");
+      const apellido = document.getElementById("apellido");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (nombre.value === "" || apellido.value === "") {
+          alert("Faltan completar datos");
+        } else {
+          const conf = confirm("Está seguro que desea enviar");
+          if (conf) {
+            let nombreCodificado = encodeURIComponent(nombre.value);
+            let apellidoCodificado = encodeURIComponent(apellido.value);
+            let url =
+              "respuestaFormulario.html?nombre=" +
+              nombreCodificado +
+              "&apellido=" +
+              apellidoCodificado;
+            window.location.href = url;
+          }
+        }
+      });
+
+    </script>
+  </body>
+</html>

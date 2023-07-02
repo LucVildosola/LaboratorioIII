@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <nav class="navFooter">
+      <h2 class="textNavFooter">Artículos</h2>
+      <div class="botones">
+        <button type="button" id="cargar">Cargar Datos</button>
+        <button type="button" id="vaciar">Vaciar datos</button>
+        <button id="boton">Cargar Form</button>
+      </div>
+    </nav>
+    <table>
+      <tr class="titulosTabla">
+        <td>CODART</td>
+        <td>FAMILIA</td>
+        <td>UM</td>
+        <td>DESCRIPCIÓN</td>
+        <td>FECHA ALTA</td>
+        <td>SALDO STOCK</td>
+      </tr>
+      <tbody class="tBody" id="tBody"></tbody>
+      <tr class="titulosTabla">
+        <td>s codArt</td>
+        <td>s familia</td>
+        <td>s um</td>
+        <td>s descripción</td>
+        <td>s fecha alta</td>
+        <td>s saldo stock</td>
+      </tr>
+    </table>
+    <footer class="navFooter">
+      <h2 class="textNavFooter">fin</h2>
+    </footer>
+    <script src="/ESPECIALES/jquery-3.7.0.min.js"></script>
+    <script>//PANTALLA INICIAL
+      const botonCargar = document.getElementById("cargar");
+      const botonVaciar = document.getElementById("vaciar");
+      const tBody = document.getElementById("tBody");
+      botonCargar.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Eliminar contenido existente dentro del <tbody>
+        tBody.innerHTML = "";
+        // Obtener los datos del archivo articulos.json
+        $.getJSON("../articulos.json", function (data) {
+          // Variable para rastrear el índice de la fila actual
+          let filaIndex = 0;
+          // Recorrer los artículos y crear filas para cada uno
+          data.articulos.forEach((articulo) => {
+            // Crear una nueva fila (<tr>)
+            const fila = document.createElement("tr");
+            // Aplicar la clase de color de fondo según el índice de fila
+            fila.className = filaIndex % 2 === 0 ? "filaPar" : "filaImpar";
+            // Incrementar el índice de la fila
+            filaIndex++;
+            // Crear celdas (<td>) y asignar los valores correspondientes
+            const codArt = document.createElement("td");
+            codArt.textContent = articulo.codArt;
+            fila.appendChild(codArt);
+            const familia = document.createElement("td");
+            familia.textContent = articulo.familia;
+            fila.appendChild(familia);
+            const um = document.createElement("td");
+            um.textContent = articulo.um;
+            fila.appendChild(um);
+            const descripcion = document.createElement("td");
+            descripcion.textContent = articulo.descripcion;
+            fila.appendChild(descripcion);
+            const fechaAlta = document.createElement("td");
+            fechaAlta.textContent = articulo.FechaAlta;
+            fila.appendChild(fechaAlta);
+            const saldoStock = document.createElement("td");
+            saldoStock.textContent = articulo.saldoStock;
+            fila.appendChild(saldoStock);
+            // Agregar la fila al <tbody>
+            tBody.appendChild(fila);
+          });
+        });
+      });
+      
+      botonVaciar.addEventListener("click", (e) => {
+        e.preventDefault();
+        tBody.innerHTML = "";
+      });
+      //VENTANA MODAL
+      const boton = document.getElementById("boton");
+      boton.addEventListener("click", (e) => {
+        e.preventDefault();
+        boton.style.pointerEvents = "none";
+        boton.style.opacity = "0.3";
+        botonCargar.style.pointerEvents = "none";
+        botonCargar.style.opacity = "0.3";
+        botonVaciar.style.pointerEvents = "none";
+        botonVaciar.style.opacity = "0.3";
+        // Crear la ventana modal
+        const modal = document.createElement("div");
+        modal.classList.add("modal");
+        // Agregar estilos en línea para la clase .modal
+        modal.style.position = "fixed";
+        modal.style.top = "50%";
+        modal.style.left = "50%";
+        modal.style.transform = "translate(-50%, -50%)";
+        modal.style.width = "60%";
+        modal.style.height = "40%";
+        modal.style.backgroundColor = "lightgray";
+        modal.style.padding = "0";
+        modal.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)";
+        // Crear el botón de cierre
+        const closeButton = document.createElement("button");
+        closeButton.textContent = "X";
+        closeButton.style.position = "absolute";
+        closeButton.style.top = "0";
+        closeButton.style.right = "0";
+        closeButton.style.backgroundColor = "transparent";
+        closeButton.style.border = "none";
+        closeButton.style.fontSize = "1.5rem";
+        closeButton.style.cursor = "pointer";
+        // Agregar el evento click al botón de cierre
+        closeButton.addEventListener("click", () => {
+          modal.remove();
+          boton.style.pointerEvents = "auto";
+          boton.style.opacity = "1";
+          botonCargar.style.pointerEvents = "auto";
+          botonCargar.style.opacity = "1";
+          botonVaciar.style.pointerEvents = "auto";
+          botonVaciar.style.opacity = "1";
+        });
+        // Crear el formulario
+        const form = document.createElement("form");
+        form.classList.add("form");
+        form.style.display = "grid";
+        form.style.gridTemplateColumns = "1fr 1fr";
+        form.style.gap = "1rem";
+        form.style.backgroundColor = "lightgoldenrodyellow";
+        form.style.height = "auto";
+        form.style.marginLeft = "1rem";
+        form.style.marginRight = "1rem";
+        form.id = "form";
+        form.innerHTML = `
+          <div class="columna1">
+            <div class="contenedorInput">
+              <label for="codArt">codArt:</label>
+              <input class="input" type="text" id="codArt" required />
+            </div>
+            <div class="contenedorInput">
+              <label for="descripcion">Descripción:</label>
+              <input class="input" type="text" id="descripcion" required />
+            </div>
+      
+            <div class="contenedorInput">
+              <label for="saldoStock">Saldo Stock:</label>
+              <input class="input" type="number" id="saldoStock" required />
+            </div>
+          </div>
+          <div class="columna2">
+            <div class="contenedorInput">
+              <label for="familiaArticulo">Familia de artículo:</label>
+              <select class="input" name="familiaArticulo" id="selectFamilia" required></select>
+            </div>
+            <div class="contenedorInput">
+              <label for="fechaAlta">Fecha de Alta:</label>
+              <input class="input" type="date" id="fechaAlta" required />
+            </div>
+            <button id="botonEnviar">Enviar</button>
+          </div>
+        `;
+        // Obtener el título del formulario
+        const h2 = document.createElement("h2");
+        h2.textContent = "Formulario para ALTA - Maestro de Artículos";
+        h2.style.textAlign = "center";
+        modal.appendChild(h2);
+        modal.appendChild(closeButton);
+        modal.appendChild(form);
+        // Crear un nuevo h2 para el encabezado adicional
+        const h2Encabezado = document.createElement("h2");
+        h2Encabezado.textContent = "Encabezado Modal";
+        h2Encabezado.style.backgroundColor = "darkgray";
+        h2Encabezado.style.marginTop = 0;
+        h2Encabezado.style.textAlign = "left";
+        modal.insertBefore(h2Encabezado, h2);
+        // Crear un nuevo h2 para el pie del formulario
+        const h2PieFormulario = document.createElement("h2");
+        h2PieFormulario.textContent = "Pie del formulario";
+        h2PieFormulario.style.textAlign = "center";
+        modal.appendChild(h2PieFormulario);
+        // Agregar la ventana modal al documento
+        document.body.appendChild(modal);
+        const selectFamilia = document.getElementById("selectFamilia");
+        // Obtener los datos del archivo familias.json
+        $.getJSON("../familias.json", function (data) {
+          forEachFamilia(data.familias);
+        });
+        const forEachFamilia = (familias) => {
+          // Limpiar las opciones existentes
+          selectFamilia.innerHTML = "";
+      
+          // Recorrer las familias y crear opciones para cada una
+          familias.forEach((familia) => {
+            const optionElement = document.createElement("option");
+            optionElement.text = familia;
+            selectFamilia.appendChild(optionElement);
+          });
+        };
+      });
+      </script>
+  </body>
+</html>

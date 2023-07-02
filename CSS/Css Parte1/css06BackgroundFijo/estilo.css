@@ -1,0 +1,29 @@
+* {
+  font-size: 30px;
+}
+
+div.contenedor {
+  background-color: lightblue;
+  margin: auto;
+  width: 50%;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: darkblue;
+}
+
+div.caja {
+  padding: 20px;
+}
+
+.parrafo {
+  background-image: url(./800px_iguacu-002.jpg.jpg);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  border-style: solid;
+  border-color: red;
+  border-top-left-radius: 20px;
+}

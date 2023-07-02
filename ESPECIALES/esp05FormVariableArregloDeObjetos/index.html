@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <nav class="navFooter">
+      <h2>Formulario para ALTA - Maestro de Artículos</h2>
+    </nav>
+    <form action="" class="form" id="form">
+      <div class="columna1">
+        <div class="contenedorInput">
+          <label for="codArt">codArt:</label>
+          <input class="input" type="text" id="codArt" required />
+        </div>
+        <div class="contenedorInput">
+          <label for="descripcion">Descripción:</label>
+          <input class="input" type="text" id="descripcion" required />
+        </div>
+
+        <div class="contenedorInput">
+          <label for="saldoStock">Saldo Stock:</label>
+          <input class="input" type="number" id="saldoStock" required />
+        </div>
+      </div>
+      <div class="columna2">
+        <div class="contenedorInput">
+          <label for="familiaArticulo">Familia de artículo:</label>
+          <select
+            class="input"
+            name="familiaArticulo"
+            id="selectFamilia"
+            required
+          ></select>
+        </div>
+        <div class="contenedorInput">
+          <label for="fechaAlta">Fecha de Alta:</label>
+          <input class="input" type="date" id="fechaAlta" required />
+        </div>
+        <button id="botonEnviar">Enviar</button>
+      </div>
+    </form>
+    <footer class="navFooter">
+      <h2>Pie del formulario</h2>
+    </footer>
+    <script src="/ESPECIALES/jquery-3.7.0.min.js"></script>
+    <script>
+        const form = document.getElementById("form");
+        let selectFamilia = document.getElementById("selectFamilia");
+        let codArt = document.getElementById("codArt");
+        let descripcion = document.getElementById("descripcion");
+        let saldoStock = document.getElementById("saldoStock");
+        let fechaAlta = document.getElementById("fechaAlta");
+        $.getJSON("../familias.json", (data) => {
+            forEachFamilia(data.familias);
+        });
+        const forEachFamilia = (familias) => {
+        // Limpiar las opciones existentes
+        selectFamilia.innerHTML = "";
+        // Recorrer las familias y crear opciones para cada una
+        familias.forEach((familia) => {
+            const optionElement = document.createElement("option");
+            optionElement.text = familia;
+            selectFamilia.appendChild(optionElement);
+        });
+        };
+        form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const respuesta = {
+            familia: selectFamilia.value,
+            codArt: codArt.value,
+            descripcion: descripcion.value,
+            saldoStock: saldoStock.value,
+            fechaAlta: fechaAlta.value,
+        };
+        const urlParams = new URLSearchParams(respuesta);
+        const url = `respuesta.html?${urlParams.toString()}`;
+        window.location.href = url;
+        });
+
+    </script>
+  </body>
+</html>

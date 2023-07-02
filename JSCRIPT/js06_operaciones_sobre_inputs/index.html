@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <h2>Introducir un valor en el cuadro de texto y luego pulsar el boton para ejecutar el procedimiento correspondiente.</h2>
+
+    <input id="input" type="number" />
+    <button id="muestraValor" type="click">Muestra valor</button>
+    <button id="suma1" type="click">Suma 1</button>
+    <button id="cuadrado" type="click">x**2</button>
+    <button id="multiplicax2" type="click">Multiplica *2</button>
+    <button id="ingresePotencia" type="click">2**x</button>
+
+
+    <script >
+
+        const input = document.getElementById("input");
+        const muestraValor = document.getElementById("muestraValor");
+        const suma1 = document.getElementById("suma1");
+        const cuadrado = document.getElementById("cuadrado");
+        const multiplicax2 = document.getElementById("multiplicax2");
+        const ingresePotencia = document.getElementById("ingresePotencia");
+
+        muestraValor.addEventListener("click", () => {
+            const valorInput = Number(input.value);
+            alert(`el valor ingresado es ${valorInput}`);
+        });
+        suma1.addEventListener("click", () => {
+            let valorInput = Number(input.value);
+            valorInput++;
+            input.value = valorInput;
+        });
+        cuadrado.addEventListener("click", () => {
+            valorInput = Number(input.value);
+            valorInput = Math.pow(valorInput, 2);
+            input.value = valorInput;
+        });
+        multiplicax2.addEventListener("click", () => {
+            let valorInput = Number(input.value);
+            valorInput = valorInput * 2;
+            input.value = valorInput;
+        });
+        ingresePotencia.addEventListener("click", () => {
+            let valorInput = Number(input.value);
+            valorInput = Math.pow(2, valorInput);
+            input.value = valorInput;
+        });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.navFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+  height: 5em;
+}
+
+.textNavFooter {
+  margin: 0 auto;
+}
+
+.botones {
+  margin-left: auto;
+}
+.botones button {
+  height: 5em;
+  width: 15em;
+}
+.tBody {
+  display: flex;
+  flex-direction: column;
+}
+.titulosTabla {
+  background-color: salmon;
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  align-items: center;
+}
+.titulosTabla td {
+  border-right: 1px solid black;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.filaPar {
+  display: flex;
+  background-color: grey;
+  height: 3rem;
+  flex-direction: row;
+}
+.filaPar td {
+  margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 9rem;
+}
+
+.filaImpar {
+  background-color: lightgray;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+.filaImpar td {
+  margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 9rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+p {
+  margin: 0;
+}
+.contenedorInput {
+  display: flex;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+#botonEnviar {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 20vw;
+}
+.columna2 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.columna1 {
+  margin-top: 1rem;
+}
+
+/* .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: lightgray;
+  height: 80vh;
+}
+.input {
+  width: 70%;
+}
+.columna1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 2rem;
+}
+.columna2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contenedorInput {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  font-size: 2rem;
+}
+.contenedorInput input {
+  height: 50%;
+}
+
+#botonEnviar {
+  width: 70%;
+  height: 15%;
+  margin-top: 2rem;
+} */

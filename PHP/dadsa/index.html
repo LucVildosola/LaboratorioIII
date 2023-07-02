@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedorGeneral">
+        <div class="contenedorSuperior">
+            <div class="entrada">
+                <h3>Dato de entrada:</h3>
+            <form action="respuesta.php" method="POST">
+                <input type="text" name="palabra" id="palabra">
+            </div>
+            <div class="encriptar">
+                <h3>Encriptar</h3>
+                <div class="contenedorBoton">
+                    <button class="boton" type="click" id="boton">Obtener encriptación</button>
+                </div>
+            </form>
+            </div>
+            <div class="resultado" id="resultado">
+                <h3>Resultado:</h3>
+            </div>
+        </div>
+        <div class="contenedorInferior">
+            <div class="estado" id="estado">
+                <h3>Estado del requerimiento:</h3>
+            </div>
+            <div class="bloqueCeleste" id="bloqueCeleste"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

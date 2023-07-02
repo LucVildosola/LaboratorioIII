@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <div class="">
+      <header class="header">
+        <h4>Formulario</h4>
+      </header>
+      <div class="centerContent">
+        <form>
+          <div class="form">
+            <div class="campos">
+              <label for="campo1">Apellido:</label><br />
+              <input type="text" id="campo1" name="campo1" required />
+            </div>
+            <div class="campos">
+              <label for="campo1">2 Nombres:</label><br />
+              <input type="text" id="campo1" name="campo1" required />
+            </div>
+            <div class="campos">
+              <label for="campo1">3 Contraseña:</label><br />
+              <input type="text" id="campo1" name="campo1" required />
+            </div>
+            <div class="campos">
+              <label for="campo1">4 Campo deshabilitado:</label><br />
+              <input type="text" value="Campo deshabilitado" disabled />
+            </div>
+            <div class="campos">
+              <label for="campo1">5 Fecha y hora:</label><br />
+              <input type="datetime-local" id="fechaHora" name="fechaHora" />
+            </div>
+            <div class="campos">
+              <label for="campo1">6 DNI:</label><br />
+              <input type="text" id="campo1" name="campo1" required />
+            </div>
+            <div class="campos">
+              <label for="campo1">7 Actividades Extracurriculares:</label><br />
+              <input type="checkbox" id="miCheckbox" name="miCheckbox" />
+              <label for="miCheckbox">Musica</label><br />
+              <input type="checkbox" id="miCheckbox" name="miCheckbox" />
+              <label for="miCheckbox">pintura</label>
+            </div>
+            <div class="campos">
+              <label for="campo1">8 Sexo:</label><br />
+              <input type="radio" id="hombre" name="genero" value="hombre" />
+              <label for="hombre">Hombre</label>
+              <br />
+              <input type="radio" id="mujer" name="genero" value="mujer" />
+              <label for="mujer">Mujer</label>
+            </div>
+            <div class="campos">
+              <label for="campo1">9 Vacío:</label>
+            </div>
+            <div class="campos">
+              <label for="campo1">10 estudios cursados:</label><br />
+              <select id="nivelEducacion" name="nivelEducacion">
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="universitario">Universitario</option>
+              </select>
+            </div>
+            <div class="campos">
+              <label for="campo1">11 Area de desempeño:</label><br />
+              <select id="nivelEducacion" name="nivelEducacion">
+                <option value="primaria">Administración</option>
+                <option value="secundaria">Opción 2</option>
+                <option value="universitario">Opción 3</option>
+              </select>
+            </div>
+            <div class="campos">
+              <label for="campo1">12 Turno:</label><br />
+              <select id="nivelEducacion" name="nivelEducacion">
+                <option value="primaria">Mañana</option>
+                <option value="secundaria">Tarde</option>
+                <option value="universitario">Noche</option>
+              </select>
+            </div>
+            <div class="campos">
+              <label for="campo1">13 Conduce:</label><br />
+              <input type="radio" id="si" name="conduce" value="si" />
+              <label for="si">Si</label>
+              <br />
+              <input type="radio" id="no" name="conduce" value="no" />
+              <label for="no">No</label>
+            </div>
+          </div>
+          <br />
+          <div class="botones">
+            <input class="boton" type="submit" value="Enviar" />
+            <input class="boton" type="reset" value="reset" />
+          </div>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <h4>Pié de página</h4>
+      </footer>
+    </div>
+  </body>
+</html>

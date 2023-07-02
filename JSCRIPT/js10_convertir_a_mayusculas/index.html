@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sitio Luciano Vildosola</title>
+  </head>
+  <body>
+    <div class="contenedorGeneral">
+      <div class="contImput">
+        <label for="nombre">Ingrese Nombre:</label>
+        <input type="text" id="nombre" />
+      </div>
+      <div class="contImput">
+        <label for="apellido">Ingrese apellido:</label>
+        <input type="text" id="apellido" />
+      </div>
+    </div>
+    <script>
+        const nombre = document.getElementById("nombre");
+        const apellido = document.getElementById("apellido");
+
+        nombre.addEventListener("change", function () {
+        this.value = this.value.toUpperCase();
+        });
+
+        apellido.addEventListener("change", function () {
+        this.value = this.value.toUpperCase();
+        });
+
+    </script>
+  </body>
+</html>

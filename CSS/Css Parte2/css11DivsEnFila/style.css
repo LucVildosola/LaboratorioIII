@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.contenedorGeneral {
+  width: 90%;
+  height: auto;
+  background-color: #87cefa;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: auto;
+}
+
+.ContenedorCajas {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.caja {
+  border-radius: 5px;
+  width: 20vh;
+  height: 100px;
+  background-color: white;
+  margin-right: 15px;
+  float: left;
+  clear: none;
+  box-shadow: 10px 10px 10px -10px, 10px 0px 10px -10px;
+}
+
+.cajaDeCajas {
+  display: flex;
+  justify-content: center;
+}
+
+#caja1 {
+  background: linear-gradient(#b8136d, #c0df12);
+}
+#caja2 {
+  background: radial-gradient(circle, #ff0000, #0000ff);
+}
+
+#caja3 {
+  background: linear-gradient(#3a2a34, #08a122);
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 75%;
+}
+.img2 {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 40%;
+}
+#caja4 {
+  background: linear-gradient(#b8136d, #c0df12);
+  text-align: left;
+  padding: 10px;
+}
+#caja5 {
+  background: radial-gradient(circle, #ff0000, #0000ff);
+  text-align: left;
+}
+#caja6 {
+  background: linear-gradient(#3a2a34, #08a122);
+  background-position: center;
+  background-size: auto 100%;
+}
+
+@media (max-width: 400px) {
+  .caja {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .caja {
+    width: 40%;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .caja {
+    width: 25%;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 801px) {
+  .caja {
+    width: 20%;
+    margin: 10px;
+  }
+}
+@media (min-width: 1001px) {
+  .ContenedorCajas {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .caja {
+    width: 18%;
+    margin: 10px;
+  }
+}
+@media (min-width: 1201px) {
+  .ContenedorCajas {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .caja {
+    width: 15%;
+    margin: 10px;
+  }
+}

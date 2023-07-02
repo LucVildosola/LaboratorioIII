@@ -1,0 +1,46 @@
+
+*{
+    font-size: 22px;
+    margin:0;
+    padding:0;
+}
+
+h1{
+    font-size: 2.5em  ;
+    margin:30px;
+}
+
+
+div.soloText{
+
+    margin: auto;
+    width: 50%;
+    font-size: 0.25em;
+    background-color:lightblue ;
+
+}
+
+div.conPadding{
+
+    font-size: 0.25em;
+    margin: auto;
+    width: 50%;
+    font-size: 0.25em;
+    background-color:darkseagreen ;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+div.conPaddingYBox{
+
+    font-size: 0.25em;
+    font-size: 0.25em;
+    margin: auto;
+    width: 50%;
+    font-size: 0.25em;
+    background-color:lightgray ;
+    box-sizing: border-box;
+    padding-left:15%;
+    padding-right:15%;
+
+}

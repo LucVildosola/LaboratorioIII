@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Sitio Luciano Vildosola</title>
+</head>
+
+<body>
+    <header>
+        <h1> <br> Primer Parrafo Corto </br> </h1>
+        <h2> <br> Segundo Parrafo Corto </br> </h2>
+
+    </header>
+
+    <nav>
+        <h2> Grupo de elementos de navegacion: </h2>
+        <ul>
+            <li> <a href="https://www.google.com.ar"> Google </a> </li>
+            <li> <a href="https://www.youtube.com"> Youtube </a></li>
+            <li> <a href="https://www.bbc.com/mundo"> BBC Mundo </a></li>
+        </ul>
+
+        <hr>
+        <a href="ejer01OtraPagMismaPestaña.html"> <b align ="left">        Otra Pagina Misma Pestaña </b> </a>
+
+        <a href="ejer01OtraPagNuevaPestaña.html" target="_blank"> <b align ="center">           Otra Pagina Nueva Pestaña </b></a>
+
+        <a href="#OtroPunto"> <b align ="right">       Otro Punto dentro de la Pagina </b> </a>
+
+        <hr>
+    </nav>
+
+    <main>
+
+        <h1> Cuerpo Principal del Contenido </h1>
+        <p>
+            La etiqueta main es en HTML 5 una etiqueta semantica. Esto quiere decir que tiene que ver con el significado de lo contenido dentro de ella. Define el contenido principal de la pagina. 
+            Unicamente puede haber una sola etiqueta como esta en todo el documento.
+            <br>El contenido escrito aqui dentro no se repite en el resto del sitio. Es usado por buscadores para indexar.
+            <br>Conviene usar aqui textos que ayuden a encontra la pagina luego de procesos de indexacion de los buscadores.
+        </p>
+
+
+    </main>
+
+    <section>
+
+        <article>
+
+            <h2> Seccion etiquetas semanticas estructurales mas importantes</h2>
+
+            <ul>
+                <li> HEADER</li>
+                <li> FOOTER</li>
+                <li> SECTION</li>
+                <li> ARTICLE</li>
+                <li> NAV</li>
+                <li> ADRESS</li>
+            </ul>
+
+            <p> Las etiquetas semanticas estructurales estan relacionadas directamente con el significado
+                del contenido y no con los estilos ni las posicion dentro del documento.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h2> Reglas para etiquetas semanticas: </h2>
+            <ul>
+                <li>  Los distintos tipos de contenido se pueden asociar a las etiquetas SECTION.</li>
+                <li>  Las unidades de contenido se asocian a las etiquetas ARTICLE. O sea que un SECTION anida multiples ARTICLES.</li>
+                <li>  Las etiquetas HEADER Y FOOTER pueden ser anidadas dentro de otras HEADER o FOOTER. Osea un FOOTER podria anidar otro HEADER y FOOTER.</li>
+                <li>  Las etiquetas NAV debe ser unica en el documento y corresponde a los elementos de navegacion del documento.</li>
+                <li>  Reservar etiquetas h1 para usar dentro de etiqueras top level como main, header o footer.</li>
+            </ul>
+
+        </article>
+
+        <article>
+
+            <h3> Reglas para etiquetas semanticas: </h3>
+
+            <p> En esta seccion mostraremos imagenes identificativas de nuestro sitio.</p>
+            <p> La siguiente imagen esta insertada en tamaño natural: </p>
+
+            <img src="images.jpg" alt="Charly-Spinetta">
+
+            <p> La misma imagen con distintos atributos width: </p>
+            <p> De acuerdo a la dimension de la imagen, solo la primera no pixelara </p>
+            <p> Cada elemento img se ubica al lado de la anterior hasta completar el ancho de la ventana activa (view port)</p>
+            <p> Todas las siguientes imagenes se veran deformadas por haber definido el doble parametro de estilo (ancho y alto) </p>
+
+            <img src="images.jpg" alt="Charly-Spinetta" style="width: 100px;height: 500px">
+            <img src="images.jpg" alt="Charly-Spinetta" style="width: 200px;height: 500px">
+            <img src="images.jpg" alt="Charly-Spinetta" style="width: 300px;height: 500px">
+            <img src="images.jpg" alt="Charly-Spinetta" style="width: 400px;height: 500px">
+            <img src="images.jpg" alt="Charly-Spinetta" style="width: 500px;height: 500px">
+
+
+        </article>
+
+
+        <hr>
+
+
+
+
+        <h3> Seccion de Video </h3>
+
+        <video width="800" controls>
+            <source src="/" type="video/mp4">
+          </video>
+
+
+        <h3> Anclajes </h3>
+        <a id="OtroPunto"> Punto de Anclaje </a>
+
+    </section>
+
+
+    <footer>
+
+        <h2> Datos del Alumno </h2>
+
+        <p>Luciano Vildosola, Ciudad Jardin, Tres de Febrero</p>
+        <p> lucianovildosola@gmail.com </p>
+
+    </footer>
+
+
+</body>
+</html>

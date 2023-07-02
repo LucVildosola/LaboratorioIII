@@ -1,0 +1,85 @@
+.contenedorGeneral {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  width: auto;
+  height: 70vh;
+}
+.contenedorSuperior {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
+.contenedorInferior {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
+.estado {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  height: auto;
+  width: 30%;
+}
+.bloqueCeleste {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  height: auto;
+  width: 70%;
+}
+.contenedorBoton {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+.boton {
+  display: none;
+  justify-content: center;
+  height: 3rem;
+  width: 10rem;
+  flex-direction: column;
+  align-items: center;
+}
+.encriptar:hover .boton {
+  display: flex;
+}
+.encriptar h3 {
+  color: white;
+}
+h3 {
+  margin-left: 1rem;
+  font-size: x-large;
+}
+input {
+  margin-left: 1rem;
+}
+.entrada {
+  display: flex;
+  flex-direction: column;
+  background-color: darkgray;
+  height: auto;
+  width: 30%;
+}
+.estiloRecibiendo {
+  background-color: white;
+}
+.encriptar {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  height: auto;
+  width: 30%;
+}
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  height: auto;
+  width: 40%;
+}

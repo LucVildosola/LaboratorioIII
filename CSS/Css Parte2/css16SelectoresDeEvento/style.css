@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.contenedorGeneral {
+  width: 90%;
+  height: 100vh;
+  background-color: lightblue;
+  margin: auto;
+}
+
+.ContenedorBotones {
+  display: flex;
+}
+
+.boton {
+  width: 20vh;
+  height: 10%;
+  padding: 10px;
+  background-color: gray;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.boton:hover {
+  background-color: blue;
+  color: white;
+}
+.boton:active {
+  background-color: yellow;
+}
+.contenedorInputs {
+  margin-top: 1rem;
+  display: block;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  width: 25%;
+}
+.input input:focus {
+  background-color: lightblue;
+}
+.imagenes {
+  margin-top: 1rem;
+  max-height: 10rem;
+}
+.contenedorDeImagenes {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.contenedorDeImagen {
+  height: auto;
+  width: 100px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.img {
+  max-width: 50vw;
+  max-height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+#imagen4 {
+  height: 15vh;
+  max-width: auto;
+}
+
+.contenedorDeImagen:hover img,
+.contenedorDeImagen:focus img {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.contenedorDeImagen:hover {
+  height: auto;
+  width: auto;
+}
+#imagen4:hover {
+  height: 30vh;
+  max-width: auto;
+}
+
+.contenedorDeImagen:hover ~ .contenedorDeImagen,
+.contenedorDeImagen:focus ~ .contenedorDeImagen {
+  margin-left: calc(100px + 0.3rem);
+  margin-right: calc(100px + 0.3rem);
+}

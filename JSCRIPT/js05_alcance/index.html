@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Luciano Vildosola</title>
+</head>
+<body>
+
+    <button id= "inicIncorrecta" title="Ingrese un numero para la variable local"> Inicialización Incorrecta </button>
+    <button id= "inicCorrecta" title="Ingrese un numero para la variable global"> Inicialización Correcta </button>
+    <button id= "muestraVarGlobal" title="Muestra la variable global"> Muestra Variable Global </button>
+
+    <script>
+
+        const incorrecto = document.getElementById("inicIncorrecta");
+        const correcto = document.getElementById("inicCorrecta");
+        const valorGlobal = document.getElementById("muestraVarGlobal");
+        let global;
+        //Funcion de mensaje
+        const mensajeAlert = () => {
+            alert("El valor de la variable global es: " + global);
+            alert("El tipo de variable ingresada es " + typeof global);
+        };
+        //Eventos
+        incorrecto.addEventListener("click", () => {
+            var mensaje = prompt("Ingrese un valor para la variable global");
+            alert("El valor de la variable local es: " + mensaje);
+            alert("El tipo de variable ingresada es " + typeof mensaje);
+        });
+        correcto.addEventListener("click", () => {
+            global = prompt("Ingrese un valor para la variable global");
+            mensajeAlert();
+        });
+
+        valorGlobal.addEventListener("click", () => {
+            if (global) {
+                mensajeAlert();
+            } else {
+                alert("La variable global no está definida: ");
+            }
+        });
+
+
+    </script>
+
+
+
+
+</body>
+</html>

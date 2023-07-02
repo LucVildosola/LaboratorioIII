@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-left: 1rem;
+  }
+  .contenedorGeneral {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: lightblue;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+  .contImput {
+    display: flex;
+    flex-direction: row;
+  }
+  .contImput label {
+    margin-right: 2rem;
+  }
+  .botones {
+    display: flex;
+    flex-direction: row;
+  }
+  .boton {
+    height: auto;
+    width: 20%;
+  }

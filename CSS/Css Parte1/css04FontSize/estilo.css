@@ -1,0 +1,45 @@
+
+*{
+    font-size: 12px;
+}
+
+@media (min-width: 1080px) {
+    p{
+        background: lightgray;
+        font-size: 1em;
+    }
+    h1{
+        background: lightgray;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1080px) {
+    p{
+        background: rosybrown;
+        font-size: 2em;
+    }
+    h1{
+        background: rosybrown;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 800px){
+    p{
+        background: lightblue;
+        font-size: 3em;
+    }
+
+    h1{
+        background: lightblue;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+
+
+
